@@ -52,7 +52,7 @@ jobs:
           composer require drush/drush:'^8'
           ./vendor/drush/drush/drush -y -l http://civi.localhost site-install standard --db-url='mysql://root:passpasspw@127.0.0.1:${{ job.services.mysql.ports[3306] }}/db' --site-name=TestCivi --account-pass=admin
           chmod +w sites/default
-          cd sites/all/modules         
+          cd sites/all/modules
           git clone -b ${{ github.event.inputs.civiver }} --depth 1 https://github.com/civicrm/civicrm-core.git civicrm
           cd civicrm
           git clone -b 7.x-${{ github.event.inputs.civiver }} --depth 1 https://github.com/civicrm/civicrm-drupal.git drupal
@@ -91,4 +91,4 @@ jobs:
         if: ${{ success() }}
         with:
           name: the_file_you_requested
-          path: '/home/runner/work/testCI/testCI/drupal/sites/all/modules/civicrm/sql/civicrm_generated.mysql'
+          path: '/home/runner/work/civicrm-regen/civicrm-regen/drupal/sites/all/modules/civicrm/sql/civicrm_generated.mysql'
