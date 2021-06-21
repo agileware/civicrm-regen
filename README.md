@@ -1,3 +1,8 @@
+# OBSOLETE
+SEE INSTEAD: [script in civicrm-core](https://github.com/civicrm/civicrm-core/blob/1537e857959118892e72156ec9adc2afe041fbfd/.github/workflows/regen.yml)
+
+----
+
 # civicrm-regen
 
 If you're having trouble running bin/regen.sh locally, use this.
